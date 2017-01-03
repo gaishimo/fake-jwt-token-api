@@ -23,7 +23,7 @@ function jwttoken() {
 
 http.createServer(function (request, response) {
   var query = url.parse(request.url,true).query;
-  console.log('url: ', request.url, ', query: ', query);
+  console.log('method: ', request.method , ', url: ', request.url, ', query: ', query);
   if (query["rp"])
   {
     var consumerId = stringGen(6);
